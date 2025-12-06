@@ -1,0 +1,62 @@
+{
+    "t2m": {
+        "mean": 298.4739990234375,
+        "std": 4.784323215484619,
+        "units": "K",
+        "transform": "z-score"
+    },
+    "d2m": {
+        "mean": 294.5433349609375,
+        "std": 4.54660701751709,
+        "units": "K",
+        "transform": "z-score"
+    },
+    "u10": {
+        "mean": -0.5534552335739136,
+        "std": 2.9902586936950684,
+        "units": "m s**-1",
+        "transform": "z-score"
+    },
+    "v10": {
+        "mean": -0.029010435566306114,
+        "std": 2.9669342041015625,
+        "units": "m s**-1",
+        "transform": "z-score"
+    },
+    "msl": {
+        "mean": 101093.3125,
+        "std": 492.35101318359375,
+        "units": "Pa",
+        "transform": "z-score"
+    },
+    "sp": {
+        "mean": 98028.1171875,
+        "std": 4141.66943359375,
+        "units": "Pa",
+        "transform": "z-score"
+    },
+    "tp": {
+        "mean": 0.13347993791103363,
+        "std": 0.29798778891563416,
+        "units": "mm",
+        "transform": "log1p + z-score"
+    },
+    "ssrd": {
+        "mean": 716417.375,
+        "std": 995977.5625,
+        "units": "J m**-2",
+        "transform": "z-score"
+    },
+    "skt": {
+        "mean": 298.4599914550781,
+        "std": 5.536333084106445,
+        "units": "K",
+        "transform": "z-score"
+    },
+    "tcwv": {
+        "mean": 45.0435905456543,
+        "std": 13.609488487243652,
+        "units": "kg m**-2",
+        "transform": "z-score"
+    }
+}
