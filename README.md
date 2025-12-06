@@ -24,6 +24,7 @@
 🔗 **[Tải Dữ Liệu, Model Checkpoints & Notebooks](https://drive.google.com/drive/folders/1tf5lpbhOmHLujCH51z2INtnHAZOprNay?usp=sharing)**
 
 Bao gồm:
+
 - ✅ Dữ liệu ERA5 gốc (2017-2024)
 - ✅ Dữ liệu đã xử lý (train/val/test)
 - ✅ Model checkpoints đã train

@@ -53,11 +53,11 @@ env/
 # Chỉ giữ file JSON nhỏ
 !2_Data_Processed/normalization_stats_2017_2024.json
 
-# Checkpoints (large model files)
-4_Checkpoints/
-*.pth
-*.pt
-*.ckpt
+# # Checkpoints (large model files)
+# 4_Checkpoints/
+# *.pth
+# *.pt
+# *.ckpt
 
 # Environment variables
 .env
