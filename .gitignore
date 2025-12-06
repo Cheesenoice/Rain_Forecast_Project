@@ -106,5 +106,5 @@ tmp/
 output/
 scratch/
 
-# System files
-.gitkeep
+# Giữ lại cấu trúc thư mục
+!.gitkeep

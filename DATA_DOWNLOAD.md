@@ -15,6 +15,7 @@ Do giới hạn của GitHub (file tối đa 100MB), các file dữ liệu lớn
 **Link tải**: [Coming Soon - Sẽ cập nhật]
 
 Bao gồm:
+
 ```
 Rain_Forecast_Project_Data.zip (~20GB nén)
 ├── 1_Data_Raw/                    # Dữ liệu ERA5 gốc
@@ -23,6 +24,7 @@ Rain_Forecast_Project_Data.zip (~20GB nén)
 ```
 
 **Sau khi tải:**
+
 ```bash
 # Giải nén vào thư mục dự án
 unzip Rain_Forecast_Project_Data.zip
@@ -53,6 +55,7 @@ jupyter notebook 3_Models/2_Fourier_Convolutional_Transformer/1_Train_Fourier_Co
 ### Tùy Chọn 3: Kaggle Dataset (Coming Soon)
 
 Sẽ upload lên Kaggle Datasets để dễ dàng tải xuống:
+
 ```bash
 kaggle datasets download -d [username]/vietnam-rainfall-era5-2017-2024
 ```
@@ -150,7 +153,8 @@ A: Dữ liệu ERA5 từ Copernicus là công khai, miễn phí cho nghiên cứ
 ## 📧 Liên Hệ
 
 Nếu cần hỗ trợ tải dữ liệu, vui lòng liên hệ:
-- Email: your.email@example.com
+
+- Email: huynhhuutri2004@gmail.com
 - GitHub Issues: [Create an issue](https://github.com/Cheesenoice/Rain_Forecast_Project/issues)
 
 ---

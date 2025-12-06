@@ -364,9 +364,9 @@ Dự án này được cấp phép theo Giấy phép MIT - xem file LICENSE đ�
 
 ## Liên Hệ & Hỗ Trợ
 
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
+- **Email**: huynhhuutri2004@gmail.com
+- **GitHub**: [@cheesenoice](https://github.com/cheesenoice)
+- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/trisdev)
 
 ## Lời Cảm Ơn
 
