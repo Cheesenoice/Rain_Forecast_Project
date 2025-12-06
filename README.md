@@ -92,7 +92,7 @@ Rain_Forecast_Project/
 
 ### 🌍 Quy Trình Xử Lý Dữ Liệu
 
-<img src="5_Results/pipeline_overview.png" alt="Data Pipeline" width="450"/>
+<img src="5_Results/Project_Pipeline.png" alt="Data Pipeline" width="500"/>
 
 </div>
 
@@ -119,37 +119,24 @@ Rain_Forecast_Project/
 
 <div align="center">
 
-#### 🏗️ Quy Trình Tổng Thể
+#### 🏗️ So Sánh Hai Kiến Trúc Mô Hình
 
-<img src="5_Results/pipeline_overview.png" alt="Pipeline Tổng Thể" width="600"/>
+<img src="5_Results/Model_Compare.png" alt="So sánh FECT vs SST" width="700"/>
 
-*Quy trình hoàn chỉnh từ dữ liệu thô ERA5 đến dự báo mưa*
-
----
-
-#### ⚡ Fourier-Enhanced Convolutional Transformer (FECT)
-
-<img src="5_Results/FECT_architecture.png" alt="Kiến trúc FECT" width="500"/>
-
-**Đặc điểm nổi bật:**
-- 🔹 **CNN Encoder**: Trích xuất đặc trưng không gian cục bộ
-- 🔹 **Time2Vec**: Mã hóa thời gian có thể học
-- 🔹 **Fourier Features**: Nắm bắt mẫu tuần hoàn trong miền tần số
-- 🔹 **Spatial Attention**: Học tầm quan trọng địa lý
-- 🔹 **Transformer Stack**: 4 lớp với 8 attention heads
-
----
-
-#### 🔄 Spatio-Temporal Transformer (SST)
-
-Kiến trúc transformer thuần túy với:
-- ✓ Linear projection thay vì CNN
-- ✓ Positional encoding hình sin chuẩn
-- ✓ Dự báo thời tiết theo chuỗi trực tiếp
+_Hai kiến trúc: **FECT** (nâng cao với CNN, Fourier, Time2Vec) và **SST** (cơ bản với Transformer)_
 
 </div>
 
+**⚡ Ưu điểm của FECT (Mô hình chính):**
+
+- 🔹 **CNN Encoder**: Trích xuất đặc trưng không gian cục bộ hiệu quả
+- 🔹 **Time2Vec**: Mã hóa thời gian có thể học, vượt trội embedding sin chuẩn
+- 🔹 **Fourier Features**: Nắm bắt mẫu tuần hoàn thời tiết trong miền tần số
+- 🔹 **Spatial Attention**: Học tầm quan trọng của từng vùng địa lý
+- 🔹 **Transformer Stack**: 4 lớp, 8 heads, xử lý phụ thuộc toàn cục
+
 **⚙️ Cấu hình huấn luyện:**
+
 - Sequence Length: 4 steps (8h) | Model Dim: 128 | Heads: 8 | Layers: 4
 - Batch: 8 | Learning Rate: 1e-4 | Optimizer: Adam | Dropout: 0.1
 
