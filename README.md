@@ -17,7 +17,19 @@
 - 📊 **[Báo Cáo Nghiên Cứu Khoa Học](Report&Slide/BaoCao_NCKH.pdf)** - Báo cáo chi tiết về phương pháp, kiến trúc mô hình, thực nghiệm và kết quả
 - 🎯 **[Slide Thuyết Trình](Report&Slide/SLIDE_NCKH_NT.pdf)** - Bản trình bày tóm tắt dự án với trực quan hóa
 
-> **Lưu ý**: Tài liệu chi tiết giúp hiểu rõ hơn về quy trình nghiên cứu, phương pháp luận và đóng góp khoa học của dự án.
+## 💾 Tải Dữ Liệu & Checkpoints
+
+**📦 Google Drive - Toàn Bộ Dự Án:**
+
+🔗 **[Tải Dữ Liệu, Model Checkpoints & Notebooks](https://drive.google.com/drive/folders/1tf5lpbhOmHLujCH51z2INtnHAZOprNay?usp=sharing)**
+
+Bao gồm:
+- ✅ Dữ liệu ERA5 gốc (2017-2024)
+- ✅ Dữ liệu đã xử lý (train/val/test)
+- ✅ Model checkpoints đã train
+- ✅ Notebooks và kết quả
+
+> **Lưu ý**: Do giới hạn 100MB/file của GitHub, dữ liệu lớn (~45GB) được lưu trữ trên Google Drive. Xem chi tiết tại [DATA_DOWNLOAD.md](DATA_DOWNLOAD.md)
 
 ---
 

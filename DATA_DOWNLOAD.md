@@ -10,26 +10,43 @@ Do giới hạn của GitHub (file tối đa 100MB), các file dữ liệu lớn
 
 ## 🔗 Tải Xuống Dữ Liệu
 
-### Tùy Chọn 1: Google Drive (Khuyến Nghị)
+### Tùy Chọn 1: Google Drive (Khuyến Nghị) ⭐
 
-**Link tải**: [Coming Soon - Sẽ cập nhật]
+**🔗 Link tải**: **[Toàn Bộ Dự Án trên Google Drive](https://drive.google.com/drive/folders/1tf5lpbhOmHLujCH51z2INtnHAZOprNay?usp=sharing)**
 
 Bao gồm:
 
 ```
-Rain_Forecast_Project_Data.zip (~20GB nén)
-├── 1_Data_Raw/                    # Dữ liệu ERA5 gốc
-├── 2_Data_Processed/              # Dữ liệu đã xử lý (train/val/test)
-└── 4_Checkpoints/                 # Model weights đã train
+Rain_Forecast_Project/
+├── 1_Data_Raw/                    # Dữ liệu ERA5 gốc (~20GB)
+│   ├── era5_2017_2020/           # 10 biến khí tượng
+│   └── era5_2021_2024/           # 10 biến khí tượng
+├── 2_Data_Processed/              # Dữ liệu đã xử lý (~16GB)
+│   ├── train_2017_2022.nc
+│   ├── val_2023.nc
+│   ├── test_2024.nc
+│   └── normalization_stats_2017_2024.json
+├── 4_Checkpoints/                 # Model weights (~5GB)
+│   ├── Fourier_Convolutional_Transformer/
+│   └── Spatio_Temporal_Transformer/
+├── 3_Models/                      # Notebooks training
+├── 5_Results/                     # Kết quả đánh giá
+└── Data_Preprocessing_Notebooks/  # Notebooks xử lý dữ liệu
 ```
 
 **Sau khi tải:**
 
 ```bash
-# Giải nén vào thư mục dự án
-unzip Rain_Forecast_Project_Data.zip
+# Tải từng thư mục từ Google Drive
+# Đặt vào đúng vị trí trong dự án:
+# - 1_Data_Raw/
+# - 2_Data_Processed/
+# - 4_Checkpoints/
 
-# Hoặc giải nén thủ công và đặt vào đúng thư mục
+# Hoặc clone repository và thêm data vào
+git clone https://github.com/Cheesenoice/Rain_Forecast_Project.git
+cd Rain_Forecast_Project
+# Copy data từ Google Drive vào các thư mục tương ứng
 ```
 
 ### Tùy Chọn 2: Tải Lại Từ Copernicus (ERA5)
