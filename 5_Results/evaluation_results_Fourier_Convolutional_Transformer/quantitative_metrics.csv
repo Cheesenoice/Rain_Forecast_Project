@@ -1,0 +1,6 @@
+Chỉ số,Giá trị,Diễn giải
+R-squared (R²),0.6718677878379822,Mô hình giải thích được 67.2% phương sai của dữ liệu.
+Pearson Correlation (r),0.8217150568962097,Tương quan tuyến tính rất mạnh giữa dự báo và thực tế.
+RMSE,0.5755388823796076,Sai số trung bình (theo độ lớn) của dự báo.
+MAE,0.2671733796596527,"Trung bình, dự báo lệch khỏi thực tế một khoảng là bao nhiêu."
+Bias,0.026257269084453583,"Thiên vị rất nhỏ, mô hình gần như không over/under-predict."

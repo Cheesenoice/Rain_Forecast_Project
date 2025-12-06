@@ -45,28 +45,19 @@ env/
 .jupyterlab-settings/
 .jupyter/
 
-# Notebooks (optional - comment out if you want to track notebooks)
-# *.ipynb
-
-# Large Data Files (stored in LFS or cloud)
+# Large Data Files (> 100MB) - Không push lên GitHub
 *.nc
 *.hdf5
 *.h5
-*.csv
-*.parquet
 
-# Checkpoints (large, should be in cloud storage or LFS)
+# Chỉ giữ file JSON nhỏ
+!2_Data_Processed/normalization_stats_2017_2024.json
+
+# Checkpoints (large model files)
 4_Checkpoints/
 *.pth
 *.pt
 *.ckpt
-
-# Results (usually generated, can regenerate)
-5_Results/
-*.png
-*.jpg
-*.jpeg
-*.pdf
 
 # Environment variables
 .env
@@ -92,20 +83,6 @@ htmlcov/
 .dmypy.json
 dmypy.json
 
-# Distribution
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-
 # macOS
 .AppleDouble
 .LSOverride
@@ -123,12 +100,6 @@ Desktop.ini
 *.swp
 *~
 
-# Project specific
-1_Data_Raw/
-# (Keep 2_Data_Processed for smaller demo data)
-# OR add specific data files:
-# !2_Data_Processed/normalization_stats_2017_2024.json
-
 # Temporary outputs
 temp/
 tmp/
@@ -136,6 +107,4 @@ output/
 scratch/
 
 # System files
-.DS_Store
-Thumbs.db
 .gitkeep
