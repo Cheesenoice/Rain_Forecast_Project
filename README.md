@@ -88,7 +88,15 @@ Rain_Forecast_Project/
 
 ## Tính Năng Chính
 
-### Pipeline Dữ Liệu
+<div align="center">
+
+### 🌍 Quy Trình Xử Lý Dữ Liệu
+
+<img src="5_Results/pipeline_overview.png" alt="Data Pipeline" width="450"/>
+
+</div>
+
+### 📊 Pipeline Dữ Liệu ERA5
 
 - **Dữ liệu Tái Phân Tích ERA5**: 10 biến khí tượng với độ phân giải 0.25°
 
@@ -109,46 +117,41 @@ Rain_Forecast_Project/
 
 ### Kiến Trúc Mô Hình
 
-#### Fourier-Enhanced Convolutional Transformer (Mô hình chính)
+<div align="center">
 
-```
-Đầu vào (Batch, Seq_Len, Features, Lat, Lon)
-    ↓
-[Khối CNN Encoder]
-  - Trích xuất đặc trưng không gian với các lớp tích chập
-    ↓
-[Lớp Time2Vec]
-  - Mã hóa thời gian có thể học (vượt trội hơn embeddings hình sin)
-    ↓
-[Đặc trưng Biến đổi Fourier]
-  - Trích xuất mẫu miền tần số
-    ↓
-[Spatial Attention + Transformer Stack]
-  - Multi-head attention cho các phụ thuộc toàn cục
-  - 4 lớp transformer với kết nối phần dư
-    ↓
-[MLP Decoder]
-  - Dự đoán lượng mưa tương lai
-    ↓
-Đầu ra (Batch, Pred_Len, 1)
-```
+#### 🏗️ Quy Trình Tổng Thể
 
-**Cấu hình**:
+<img src="5_Results/pipeline_overview.png" alt="Pipeline Tổng Thể" width="600"/>
 
-- Độ dài chuỗi: 4 bước thời gian (8 giờ lịch sử)
-- Chiều mô hình: 128
-- Số đầu chú ý: 8
-- Số lớp Transformer: 4
-- Dropout: 0.1
-- Kích thước Batch: 8
-- Tốc độ học: 1e-4
-- Bộ tối ưu: Adam
+*Quy trình hoàn chỉnh từ dữ liệu thô ERA5 đến dự báo mưa*
 
-#### Spatio-Temporal Transformer
+---
 
-- Kiến trúc transformer thuần túy không có tiền xử lý CNN
-- Được thiết kế cho dự báo thời tiết theo chuỗi trực tiếp
-- Hiệu suất tương đương với thiên hướng quy nạp khác nhau
+#### ⚡ Fourier-Enhanced Convolutional Transformer (FECT)
+
+<img src="5_Results/FECT_architecture.png" alt="Kiến trúc FECT" width="500"/>
+
+**Đặc điểm nổi bật:**
+- 🔹 **CNN Encoder**: Trích xuất đặc trưng không gian cục bộ
+- 🔹 **Time2Vec**: Mã hóa thời gian có thể học
+- 🔹 **Fourier Features**: Nắm bắt mẫu tuần hoàn trong miền tần số
+- 🔹 **Spatial Attention**: Học tầm quan trọng địa lý
+- 🔹 **Transformer Stack**: 4 lớp với 8 attention heads
+
+---
+
+#### 🔄 Spatio-Temporal Transformer (SST)
+
+Kiến trúc transformer thuần túy với:
+- ✓ Linear projection thay vì CNN
+- ✓ Positional encoding hình sin chuẩn
+- ✓ Dự báo thời tiết theo chuỗi trực tiếp
+
+</div>
+
+**⚙️ Cấu hình huấn luyện:**
+- Sequence Length: 4 steps (8h) | Model Dim: 128 | Heads: 8 | Layers: 4
+- Batch: 8 | Learning Rate: 1e-4 | Optimizer: Adam | Dropout: 0.1
 
 ### Đánh Giá & Kết Quả
 
