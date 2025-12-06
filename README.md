@@ -366,7 +366,7 @@ Dự án này được cấp phép theo Giấy phép MIT - xem file LICENSE đ�
 
 - **Email**: huynhhuutri2004@gmail.com
 - **GitHub**: [@cheesenoice](https://github.com/cheesenoice)
-- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/trisdev)
+- **LinkedIn**: [Trí Huỳnh](https://www.linkedin.com/in/trisdev)
 
 ## Lời Cảm Ơn
 
