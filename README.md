@@ -14,8 +14,8 @@
 
 **Xem trước tài liệu nghiên cứu:**
 
-- 📊 **[Báo Cáo Nghiên Cứu Khoa Học](Report&Slide/BaoCao_NCKH.pdf)** - Báo cáo chi tiết về phương pháp, kiến trúc mô hình, thực nghiệm và kết quả
-- 🎯 **[Slide Thuyết Trình](Report&Slide/SLIDE_NCKH_NT.pdf)** - Bản trình bày tóm tắt dự án với trực quan hóa
+- 📊 **[Báo Cáo Nghiên Cứu Khoa Học](https://drive.google.com/file/d/1Cxhg5HA4oih5E2pFF0SWeDFgl7aVhWfT/view?usp=sharing)** - Báo cáo chi tiết về phương pháp, kiến trúc mô hình, thực nghiệm và kết quả
+- 🎯 **[Slide Thuyết Trình](https://drive.google.com/file/d/1Dwrhw-IcwBDLRsRLCWWoyQrkAwsVRyLE/view?usp=sharing)** - Bản trình bày tóm tắt dự án với trực quan hóa
 
 ## 💾 Tải Dữ Liệu & Checkpoints
 
