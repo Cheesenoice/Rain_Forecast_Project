@@ -1,20 +1,20 @@
-# Dữ Liệu Thô - Bộ Dữ Liệu Tái Phân Tích ERA5
+# Raw Data - ERA5 Reanalysis Dataset
 
-Thư mục này chứa dữ liệu khí tượng thô được tải xuống từ **Kho Dữ Liệu Khí Hậu Copernicus (ERA5)**.
+This directory contains raw meteorological data downloaded from the **Copernicus Climate Data Store (ERA5)**.
 
-## Tổng Quan
+## Overview
 
-- **Nguồn Dữ Liệu**: ERA5 Reanalysis (ECMWF)
-- **Phạm Vi Thời Gian**: 2017-2024 (8 năm)
-- **Độ Phân Giải Không Gian**: 0.25° × 0.25°
-- **Độ Phân Giải Thời Gian**: 2 giờ/lần (00:00, 02:00, 04:00, ..., 22:00)
-- **Khu Vực Địa Lý**: Việt Nam (8°N-24°N, 102°E-110°E)
-- **Định Dạng**: NetCDF4
+- **Data Source**: ERA5 Reanalysis (ECMWF)
+- **Time Range**: 2017-2024 (8 years)
+- **Spatial Resolution**: 0.25° × 0.25°
+- **Temporal Resolution**: 2-hourly (00:00, 02:00, 04:00, ..., 22:00)
+- **Geographic Scope**: Vietnam (8°N-24°N, 102°E-110°E)
+- **Format**: NetCDF4
 
-## Cấu Trúc Thư Mục
+## Directory Structure
 
 ```
-era5_2017_2020/              # Giai đoạn 1: 2017-2020
+era5_2017_2020/              # Period 1: 2017-2020
 ├── era5_vn_2m_temperature_2017_2020.nc
 ├── era5_vn_2m_dewpoint_temperature_2017_2020.nc
 ├── era5_vn_10m_u_component_of_wind_2017_2020.nc
@@ -26,7 +26,7 @@ era5_2017_2020/              # Giai đoạn 1: 2017-2020
 ├── era5_vn_skin_temperature_2017_2020.nc
 └── era5_vn_total_column_water_vapour_2017_2020.nc
 
-era5_2021_2024/              # Giai đoạn 2: 2021-2024
+era5_2021_2024/              # Period 2: 2021-2024
 ├── era5_vn_2m_temperature_2021_2024.nc
 ├── era5_vn_2m_dewpoint_temperature_2021_2024.nc
 ├── era5_vn_10m_u_component_of_wind_2021_2024.nc
@@ -39,72 +39,72 @@ era5_2021_2024/              # Giai đoạn 2: 2021-2024
 └── era5_vn_total_column_water_vapour_2021_2024.nc
 ```
 
-## Các Biến Được Bao Gồm
+## Variables Included
 
-| Biến                             | Tên Viết Tắt | Đơn Vị | Mô Tả                                      |
-| -------------------------------- | ------------ | ------ | ------------------------------------------ |
-| Nhiệt Độ 2m                      | t2m          | K      | Nhiệt độ không khí ở độ cao 2m trên bề mặt |
-| Nhiệt Độ Điểm Sương 2m           | d2m          | K      | Nhiệt độ điểm sương ở độ cao 2m            |
-| Thành Phần Gió U 10m             | u10          | m/s    | Thành phần gió hướng đông ở độ cao 10m     |
-| Thành Phần Gió V 10m             | v10          | m/s    | Thành phần gió hướng bắc ở độ cao 10m      |
-| Áp Suất Mực Nước Biển Trung Bình | msl          | Pa     | Áp suất quy về mực nước biển trung bình    |
-| Áp Suất Bề Mặt                   | sp           | Pa     | Áp suất tại bề mặt                         |
-| Tổng Lượng Mưa                   | tp           | m      | Lượng mưa tích lũy (biến mục tiêu)         |
-| Bức Xạ Mặt Trời Bề Mặt           | ssrd         | J/m²   | Bức xạ mặt trời chiếu xuống bề mặt         |
-| Nhiệt Độ Bề Mặt                  | skt          | K      | Nhiệt độ của lớp bề mặt                    |
-| Tổng Hơi Nước Cột                | tcwv         | kg/m²  | Hơi nước tích phân theo phương thẳng đứng  |
+| Variable                          | Abbreviation | Units | Description                                  |
+| --------------------------------- | ------------ | ----- | -------------------------------------------- |
+| 2m Temperature                    | t2m          | K     | Air temperature at 2m height above surface   |
+| 2m Dewpoint Temperature           | d2m          | K     | Dewpoint temperature at 2m height            |
+| 10m U Wind Component              | u10          | m/s   | Eastward component of wind at 10m height     |
+| 10m V Wind Component              | v10          | m/s   | Northward component of wind at 10m height    |
+| Mean Sea Level Pressure           | msl          | Pa    | Pressure reduced to mean sea level           |
+| Surface Pressure                  | sp           | Pa    | Pressure at the surface                      |
+| Total Precipitation               | tp           | m     | Accumulated liquid and frozen water (Target) |
+| Surface Solar Radiation Downwards | ssrd         | J/m²  | Solar radiation reaching the surface         |
+| Skin Temperature                  | skt          | K     | Temperature of the surface layer             |
+| Total Column Water Vapour         | tcwv         | kg/m² | Vertically integrated water vapour           |
 
-## Đặc Điểm Dữ Liệu
+## Data Characteristics
 
-### Phạm Vi Không Gian
+### Spatial Scope
 
-- **Biên Phía Bắc**: 24°N (Miền Núi Phía Bắc)
-- **Biên Phía Nam**: 8°N (Bờ Biển Phía Nam)
-- **Biên Phía Tây**: 102°E (Biên Giới Lào)
-- **Biên Phía Đông**: 110°E (Biển Đông)
-- **Điểm Lưới**: 65 vĩ độ × 33 kinh độ = 2,145 vị trí không gian
+- **North Boundary**: 24°N (Northern Mountains)
+- **South Boundary**: 8°N (Southern Coast)
+- **West Boundary**: 102°E (Laos Border)
+- **East Boundary**: 110°E (South China Sea)
+- **Grid Points**: 65 latitude × 33 longitude = 2,145 spatial locations
 
-### Chi Tiết Thời Gian
+### Temporal Details
 
-- **Khoảng Thời Gian**: 2017-01-01 00:00 đến 2024-12-31 22:00
-- **Điểm Dữ Liệu**: ~34,944 bước thời gian × 10 biến × 2,145 vị trí
-- **Tổng Dung Lượng**: ~40 GB (không nén cho cả hai giai đoạn)
+- **Time Span**: 2017-01-01 00:00 to 2024-12-31 22:00
+- **Data Points**: ~34,944 time steps × 10 variables × 2,145 locations
+- **Total Volume**: ~40 GB (uncompressed for both periods)
 
-## Ghi Chú Chất Lượng Dữ Liệu
+## Data Quality Notes
 
-1. **Sản Phẩm Tái Phân Tích**: ERA5 là bộ dữ liệu tái phân tích kết hợp dữ liệu mô hình với quan sát
-2. **Không Có Giá Trị Thiếu**: Copernicus đảm bảo độ bao phủ đầy đủ với việc lấp đầy khoảng trống
-3. **Vấn Đề Đã Biết**:
-   - Lượng mưa mùa có thể bị đánh giá thấp ở địa hình phức tạp
-   - Các khu vực độ cao lớn có thể có độ chính xác thấp hơn
-4. **Xử Lý**: Các biến riêng lẻ được chia theo giai đoạn thời gian để đảm bảo độ tin cậy khi tải xuống
+1. **Reanalysis Product**: ERA5 is a reanalysis dataset combining model data with observations.
+2. **No Missing Values**: Copernicus ensures complete coverage with gap-filling.
+3. **Known Issues**:
+   - Seasonal rainfall may be underestimated in complex terrain.
+   - High-altitude areas may have lower accuracy.
+4. **Processing**: Individual variables are split by time periods to ensure download reliability.
 
-## Truy Cập Dữ Liệu
+## Data Access
 
-### Tùy Chọn 1: Sử Dụng Dữ Liệu Đã Xử Lý (Khuyến Nghị)
+### Option 1: Use Processed Data (Recommended)
 
-Nếu bạn chỉ cần các bộ dữ liệu đã xử lý và chuẩn hóa:
+If you only need the processed and normalized datasets:
 
 ```bash
 cd ../2_Data_Processed/
-# Sử dụng train_2017_2022.nc, val_2023.nc, test_2024.nc
+# Use train_2017_2022.nc, val_2023.nc, test_2024.nc
 ```
 
-### Tùy Chọn 2: Tải Lại Dữ Liệu Thô
+### Option 2: Re-download Raw Data
 
-Để tải lại từ CDS:
+To re-download from CDS:
 
 ```bash
 jupyter notebook ../Data_Preprocessing_Notebooks/1_Era5_Weather_Data_Download.ipynb
 ```
 
-Yêu cầu:
+Requirements:
 
-- Khóa API CDS từ https://cds.climate.copernicus.eu/
-- ~50GB dung lượng đĩa trống
-- ~2-3 giờ thời gian tải xuống (tùy thuộc vào kết nối)
+- CDS API Key from https://cds.climate.copernicus.eu/
+- ~50GB free disk space
+- ~2-3 hours download time (connection dependent)
 
-### Tùy Chọn 3: Truy Vấn CDS Trực Tiếp
+### Option 3: Direct CDS Query
 
 ```python
 import cdsapi
@@ -118,58 +118,58 @@ client.retrieve(
         'format': 'netcdf',
         'variable': ['2m_temperature', 'total_precipitation'],
         'year': ['2017', '2018', '2019', '2020'],
-        'month': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        'month': [f'{i:02d}' for i in range(1, 13)],
         'day': [f'{i:02d}' for i in range(1, 32)],
-        'time': ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        'time': [f'{i:02d}:00' for i in range(0, 24, 2)],
         'area': [24, 102, 8, 110],  # North, West, South, East
     },
     'output.nc'
 )
 ```
 
-## Quy Ước Đặt Tên Tệp
+## File Naming Convention
 
-Định dạng: `era5_vn_{variable}_{year_start}_{year_end}.nc`
+Format: `era5_vn_{variable}_{year_start}_{year_end}.nc`
 
-Ví dụ: `era5_vn_total_precipitation_2017_2020.nc`
+Example: `era5_vn_total_precipitation_2017_2020.nc`
 
-- `era5_vn`: Tiền tố ERA5 Việt Nam
-- `{variable}`: Tên biến khí tượng
-- `{year_start}_{year_end}`: Giai đoạn thời gian
+- `era5_vn`: ERA5 Vietnam prefix
+- `{variable}`: Meteorological variable name
+- `{year_start}_{year_end}`: Time period
 
-## Tham Khảo Dung Lượng
+## Volume Reference
 
-Mỗi tệp NetCDF (điển hình):
+Each NetCDF file (typical):
 
-- **Biến nhiệt độ**: ~800 MB mỗi tệp
-- **Biến áp suất**: ~600 MB mỗi tệp
-- **Lượng mưa**: ~900 MB (biến mục tiêu quan trọng)
-- **Tổng mỗi giai đoạn**: ~8 GB
+- **Temperature variables**: ~800 MB per file
+- **Pressure variables**: ~600 MB per file
+- **Precipitation**: ~900 MB (Key target variable)
+- **Total per period**: ~8 GB
 
-## Quy Trình Xử Lý
+## Processing Workflow
 
 ```
 era5_2017_2020/*.nc + era5_2021_2024/*.nc
                     ↓
-        [Notebook Khám Phá Dữ Liệu]
-        (phân tích khám phá)
+        [Data Discovery Notebook]
+        (exploratory analysis)
                     ↓
-    [Notebook Gộp và Chuẩn Hóa Dữ Liệu]
-    (căn chỉnh, gộp, chuẩn hóa)
+    [Merge & Normalize Notebook]
+    (alignment, merging, normalization)
                     ↓
         2_Data_Processed/
-        (chia tập train/val/test)
+        (train/val/test splits)
                     ↓
         3_Models/
-        (huấn luyện & suy luận)
+        (training & inference)
 ```
 
-## Tài Liệu Tham Khảo
+## References
 
-- **Tài Liệu ERA5**: https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5
-- **Hướng Dẫn API CDS**: https://cds.climate.copernicus.eu/api-how-to
-- **Trích Dẫn Bộ Dữ Liệu**: Hersbach et al. (2020) - https://doi.org/10.1038/s41586-020-2438-0
+- **ERA5 Documentation**: https://confluence.ecmwf.int/display/CKB/ERA5
+- **CDS API Guide**: https://cds.climate.copernicus.eu/api-how-to
+- **Dataset Citation**: Hersbach et al. (2020) - https://doi.org/10.1038/s41586-020-2438-0
 
 ---
 
-**Lưu ý**: Thư mục này được bao gồm trong kho lưu trữ để tham khảo. Để có đầy đủ chức năng, hãy đảm bảo các tệp có mặt trước khi chạy các notebook tiền xử lý hoặc huấn luyện.
+**Note**: This directory is included in the repository for reference. For full functionality, ensure files are present before running preprocessing or training notebooks.
